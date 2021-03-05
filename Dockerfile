@@ -5,7 +5,7 @@ RUN apk add python busybox-extras alpine-sdk bash yarn
 
 COPY package*.json ./
 
-RUN yarn install
+RUN yarn install  
 
 COPY . ./
 
