@@ -11,6 +11,9 @@ node {
         //         sh 'node -v'
         //     }
         // }
+        stage('Checkout'){
+            echo "Checking out"
+        }
 
         stage('Deploy container') {
             sh """
