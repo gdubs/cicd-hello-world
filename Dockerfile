@@ -1,13 +1,13 @@
 FROM node:10.23-alpine
 
 RUN apk update
-RUN apk add python busybox-extras alpine-sdk bash 
+RUN apk add python busybox-extras alpine-sdk bash yarn
 
 COPY package*.json ./
 
 RUN yarn install
 
-COPY . .
+COPY . ./
 
 EXPOSE 3000
 
