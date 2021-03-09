@@ -21,5 +21,8 @@ node {
             """
         }
     }
+    catch (all) {
+        echo "Exception: " + all.toString()
+    }
 }
 
