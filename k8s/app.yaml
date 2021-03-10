@@ -21,8 +21,8 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
-      imagePullSecrets:
-        - name: dockerhub-gdubdubs  
+      # imagePullSecrets:
+      #   - name: dockerhub-gdubdubs  
   strategy:
         type: RollingUpdate
         rollingUpdate:
