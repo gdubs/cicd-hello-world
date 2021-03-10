@@ -15,7 +15,15 @@ node {
             echo "Checking out"
         }
 
-        stage('Deploy container') {
+        stage('Get credentials - k8'){
+            echo "Get kubeconfig"
+
+            sh """
+                aws eks --region us-east-2 update-kubeconfig --name terraform-eks-demo-gr
+            """
+
+        }
+        stage('Deploy service') {
             sh """
                 kubectl apply -f k8s/app.yaml
             """
